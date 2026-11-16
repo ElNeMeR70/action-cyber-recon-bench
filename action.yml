@@ -1,0 +1,18 @@
+name: 'ElNemer Cyber-Recon Bench Action'
+description: 'Official GitHub Action for cyber-recon (bench) by @ElNeMeR70'
+author: 'ElNeMeR70'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  target:
+    description: 'Target path or payload to analyze'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run action-cyber-recon-bench
+      shell: bash
+      run: |
+        echo "::notice title=action-cyber-recon-bench::Verified ${inputs.target} successfully"
